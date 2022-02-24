@@ -1,9 +1,10 @@
 public class Product {
 
-    private int uid, price;
+    private final int uid;
+    private int price;
     static int counterUid = 0;
-    String nume;
-    Date dateOfFabrication, dateOfExpiration;
+    private String nume;
+    private Date dateOfFabrication, dateOfExpiration;
 
     Product()
     {
@@ -13,6 +14,7 @@ public class Product {
         this.dateOfExpiration = new Date();
         uid = ++counterUid;
     }
+
     public Product( String nume,int price, Date dateOfFabrication, Date dateOfExpiration) {
         this.price = price;
         this.nume = nume;
@@ -25,7 +27,23 @@ public class Product {
         return price;
     }
 
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public String getNume() {
         return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public Date getDateOfFabrication() {
+        return dateOfFabrication;
+    }
+
+    public Date getDateOfExpiration() {
+        return dateOfExpiration;
     }
 }

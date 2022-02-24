@@ -1,5 +1,5 @@
 public class Date {
-    int year, month, day;
+    private int year, month, day;
 
     Date()
     {
@@ -7,6 +7,7 @@ public class Date {
         month = 0;
         day = 0;
     }
+
     Date(int day, int month, int year)
     {
         setDay(day);
