@@ -3,13 +3,13 @@ public class Product {
     private final int uid;
     private int price;
     static int counterUid = 0;
-    private String nume;
+    private String name;
     private Date dateOfFabrication, dateOfExpiration;
 
     Product()
     {
         this.price = 0;
-        this.nume = "";
+        this.name = "";
         this.dateOfFabrication = new Date();
         this.dateOfExpiration = new Date();
         uid = ++counterUid;
@@ -17,7 +17,7 @@ public class Product {
 
     public Product( String nume,int price, Date dateOfFabrication, Date dateOfExpiration) {
         this.price = price;
-        this.nume = nume;
+        this.name = nume;
         this.dateOfFabrication = dateOfFabrication;
         this.dateOfExpiration = dateOfExpiration;
         uid = ++counterUid;
@@ -31,12 +31,12 @@ public class Product {
         this.price = price;
     }
 
-    public String getNume() {
-        return nume;
+    public String getName() {
+        return name;
     }
 
     public void setNume(String nume) {
-        this.nume = nume;
+        this.name = nume;
     }
 
     public Date getDateOfFabrication() {
