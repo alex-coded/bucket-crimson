@@ -41,9 +41,21 @@ public class Basket {
         System.out.println("The basket no " + id + " contains the following products: ");
         for(var obj : listOfProducts)
         {
-            System.out.println(obj.getNume() + ": " + obj.getPrice());
+            System.out.println(obj.getName() + ": " + obj.getPrice());
         }
         System.out.println("The basket has " + listOfProducts.size() +" products. \nThe total sum of your basket is: " + computeTotal() + " lei\n");
+
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        int currentMonth = Calendar.getInstance().get(Calendar.MONTH);
+        int currentDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+
+        for(var obj : listOfProducts)
+        {
+            if(obj.getDateOfExpiration().getYear() < currentYear)
+            {
+                System.out.println("The product " + obj.getName() + " is expired");
+            }
+        }
     }
 
 }
